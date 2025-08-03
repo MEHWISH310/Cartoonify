@@ -5,7 +5,6 @@ import os
 import tkinter as tk
 from tkinter import messagebox
 
-# === Globals ===
 image_path_global = None
 cartoon_image_global = None
 
@@ -52,7 +51,6 @@ def save_image():
     cv2.imwrite(full_path, cv2.cvtColor(cartoon_image_global, cv2.COLOR_RGB2BGR))
     messagebox.showinfo("Success", f"Saved cartoon image at:\n{full_path}")
 
-# === GUI ===
 top = tk.Tk()
 top.geometry("400x400")
 top.title("Cartoonify App")
@@ -75,7 +73,7 @@ save_btn = tk.Button(top, text="💾 Save Image", command=save_image,
                      state=tk.DISABLED)
 save_btn.pack(pady=10)
 
-footer = tk.Label(top, text="Made by Mehwish 💖", bg='white', fg='gray')
+footer = tk.Label(top, text="Made by Mehwish", bg='white', fg='gray')
 footer.pack(side=tk.BOTTOM, pady=20)
 
 top.mainloop()
